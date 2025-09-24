@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snippets on the Fly</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column; /* stack header, content, footer vertically */
+        font-family: Georgia, serif;
+        background: #f9f9f9;
+        color: #333;
+      }
+
+      header {
+        background: #1a1a1a;
+        color: #fff;
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+      }
+
+      header p {
+        margin: 0.5rem 0 0;
+        font-size: 1.2rem;
+        color: #bbb;
+      }
+
+      nav {
+        margin-top: 1rem;
+      }
+
+      nav a {
+        margin: 0 1rem;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        flex: 1; /* this grows to push footer down */
+      }
+
+      .hero {
+        text-align: center;
+        padding: 3rem 1rem;
+        background: #fff;
+        border-bottom: 1px solid #eee;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto 2rem;
+      }
+
+      .posts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.5rem;
+        padding: 2rem;
+      }
+
+      .post {
+        background: #fff;
+        border-radius: 10px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+      }
+
+      .post:hover {
+        transform: translateY(-5px);
+      }
+
+      .post h3 {
+        margin-top: 0;
+      }
+
+      .post p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      .post a {
+        display: inline-block;
+        color: #1a73e8;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .post a:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        text-align: center;
+        padding: 1.5rem;
+        background: #1a1a1a;
+        color: #bbb;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Snippets on the Fly</h1>
+      <p>Thoughts, Projects, Insights, something to read on the fly</p>
+      <nav>
+        <a href="{{url_for('home')}}">Home</a>
+        <a href="#">Articles</a>
+        <a href="{{url_for('about')}}">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    <div class="container">
+      <section class="hero">
+        <h2>Welcome to Snippets on the Fly</h2>
+        <p>
+          Dive into engaging articles that uncover interesting facts and
+          projects around computers and science. Enjoy articles about
+          mini-projects, data presentation and visualization. Articles published
+          are meant to get you engaged and motivated to try things out
+          yourselfs.
+        </p>
+      </section>
+
+      <section class="posts">
+        <div class="post">
+          <h3>The easy way of getting webpage going?</h3>
+          <p>
+            With AI tools like ChatGPT or Copilot, setting up software or web
+            applications have become trivial. Everybody with access to a
+            programming machine and an AI Chatbot can basically setup a webpage
+            for example. But is it really that simple?
+            <a href="#">Read More →</a> about potential issues that might arise
+            and what I think about programming with AI
+          </p>
+        </div>
+
+        <div class="post">
+          <h3>
+            Analyzing and Visualizing Scientific Data and what to keep in mind
+          </h3>
+          <p>
+            Visualizing or plotting scientific data is as easy as it gets since
+            we have powerful computers. Whether you use any kind of software
+            like MS Excel or an advanced way via Programming Languages such as
+            Python. However, the magic behind it all is not the technical
+            approach but the concepts behind the analysis and visualization.
+            <a href="#">Read More →</a> about the way how different
+            classifications heavily influence the visual appearance of data.
+          </p>
+        </div>
+
+        <div class="post">
+          <h3>The Influence of AI on the Music Industry</h3>
+          <p>
+            Generative AI models have made significant advancements in recent
+            years, enabling the creation of music that closely mimics human
+            compositions. It is able to create, modify and compose music in high
+            quality such that professional musicians really caught an eye on
+            that. Stay tuned for a detailed article and interview with a
+            prospective piano player.
+          </p>
+          <a href="#">Read More →</a>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Insights into Science. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column; /* stack header, content, footer vertically */
+        font-family: Georgia, serif;
+        background: #f9f9f9;
+        color: #333;
+      }
+
+      header {
+        background: #1a1a1a;
+        color: #fff;
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+      }
+
+      header p {
+        margin: 0.5rem 0 0;
+        font-size: 1.2rem;
+        color: #bbb;
+      }
+
+      nav {
+        margin-top: 1rem;
+      }
+
+      nav a {
+        margin: 0 1rem;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Snippets on the Fly</h1>
+      <p>Thoughts, Projects, Insights, something to read on the fly</p>
+      <nav>
+        <a href="{{url_for('home')}}">Home</a>
+        <a href="#">Articles</a>
+        <a href="{{url_for('about')}}">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="hero">
+        <h2>About This Blog</h2>
+        <p>
+          Welcome to my blog! I am very glad you find your way here. No matter whether you are 
+          a computer scienctist yourself, just interested in topics around computer science, AI and data or you just got here by accident - 
+          I hope you will find something interesting to read.
+        </p>
+        <h2>About Me</h2>
+        <p>But first of all, let me tell you something about myself. I am Noël a computer scientist at University of Zurich and I am fascinated by any topics
+          around computers, AI and data. I started this blog to share my thoughts, projects and insights with you. I am for sure not the best writer, neither 
+          you will find the best programmer in me, but I rather see this as an opportunity to learn and grow, while sharing some interesting stuff with you.
+          If you have any feedback, ideas or just want to say hi, feel free to reach out to me via the contact form.
+        </p>
+      </div>
+  </body>
+</html>
