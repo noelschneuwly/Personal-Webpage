@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Snippets on the Fly</title>
+    <title>About</title>
     <style>
       html,
       body {
@@ -52,31 +52,9 @@
         text-decoration: underline;
       }
 
-      .container {
-        flex: 1; /* this grows to push footer down */
-      }
-
-      .hero {
-        text-align: center;
-        padding: 3rem 1rem;
-        background: #fff;
-        border-bottom: 1px solid #eee;
-      }
-
-      .hero h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-      }
-
-      .hero p {
-        font-size: 1.1rem;
-        max-width: 600px;
-        margin: 0 auto 2rem;
-      }
-
       .posts {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-template-columns: auto;
         gap: 1.5rem;
         padding: 2rem;
       }
@@ -112,13 +90,6 @@
       .post a:hover {
         text-decoration: underline;
       }
-
-      footer {
-        text-align: center;
-        padding: 1.5rem;
-        background: #1a1a1a;
-        color: #bbb;
-      }
     </style>
   </head>
   <body>
@@ -132,18 +103,7 @@
         <a href="#">Contact</a>
       </nav>
     </header>
-    <div class="container">
-      <section class="hero">
-        <h2>Welcome to Snippets on the Fly</h2>
-        <p>
-          Dive into engaging articles that uncover interesting facts and
-          projects around computers and science. Enjoy articles about
-          mini-projects, data presentation and visualization. Articles published
-          are meant to get you engaged and motivated to try things out
-          yourselfs.
-        </p>
-      </section>
-
+    <div>
       <section class="posts">
         <div class="post">
           <h3>The easy way of getting webpage going?</h3>
@@ -186,9 +146,5 @@
         </div>
       </section>
     </div>
-
-    <footer>
-      <p>&copy; 2025 Insights into Science. All rights reserved.</p>
-    </footer>
   </body>
 </html>

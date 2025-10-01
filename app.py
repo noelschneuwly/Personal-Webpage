@@ -10,6 +10,9 @@ def home():
 def about():
     return render_template("about.html")
 
+@app.route("/articles", methods=["GET"])
+def articles():
+    return render_template("articles.html")
 
 if __name__ == "__main__":
     app.run(debug=False)
