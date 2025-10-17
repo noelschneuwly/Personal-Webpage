@@ -14,5 +14,9 @@ def about():
 def articles():
     return render_template("articles.html")
 
+@app.route("/contact", methods=["GET"])
+def contact():
+    return render_template("contact.html")
+
 if __name__ == "__main__":
     app.run(debug=False)

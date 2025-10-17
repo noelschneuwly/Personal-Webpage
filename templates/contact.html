@@ -19,6 +19,10 @@
         color: #333;
       }
 
+      body > div {
+        flex: 1;
+      }
+
       header {
         background: #1a1a1a;
         color: #fff;
@@ -52,19 +56,43 @@
         text-decoration: underline;
       }
 
-      .container {
+      .posts {
         display: grid;
         grid-template-columns: auto;
         gap: 1.5rem;
         padding: 2rem;
       }
 
-      .hero {
+      .post {
         background: #fff;
         border-radius: 10px;
         padding: 1.5rem;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         transition: transform 0.2s ease;
+      }
+
+      .post:hover {
+        transform: translateY(-5px);
+      }
+
+      .post h3 {
+        margin-top: 0;
+      }
+
+      .post p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      .post a {
+        display: inline-block;
+        color: #1a73e8;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .post a:hover {
+        text-decoration: underline;
       }
 
       footer {
@@ -73,7 +101,6 @@
         background: #1a1a1a;
         color: #bbb;
       }
-
     </style>
   </head>
   <body>
@@ -87,21 +114,19 @@
         <a href="{{url_for('contact')}}">Contact</a>
       </nav>
     </header>
-    <div class="container">
-      <div class="hero">
-        <h3>About This Blog</h3>
-        <p>
-          Welcome to my blog! I am very glad you find your way here. No matter whether you are 
-          a computer scienctist yourself, just interested in topics around computer science, AI and data or you just got here by accident - 
-          I hope you will find something interesting to read.
-        </p>
-        <h3>About Me</h3>
-        <p>But first of all, let me tell you something about myself. I am Noël a computer scientist at University of Zurich and I am fascinated by any topics
-          around computers, AI and data. I started this blog to share my thoughts, projects and insights with you. I am for sure not the best writer, neither 
-          you will find the best programmer in me, but I rather see this as an opportunity to learn and grow, while sharing some interesting stuff with you.
-          If you have any feedback, ideas or just want to say hi, feel free to reach out to me via the contact form.
-        </p>
-      </div>
+    <div>
+      <section class="posts">
+        <div class="post">
+          <h3>Contact Details</h3>
+          <p>
+            Looking for further insights? Make sure to follow me on
+            <a href="www.linkedin.com/in/noël-schneuwly-2a05612b5">LinkedIn</a>.
+            If you want to receive updates about this blog and further content,
+            I would appreciate a subscription to my <a href="#">Newsletter</a>.
+          </p>
+        </div>
+      </section>
+    </div>
     <footer>
       <p>&copy; 2025 Snippets on the Fly. All rights reserved.</p>
     </footer>

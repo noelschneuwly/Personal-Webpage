@@ -90,6 +90,13 @@
       .post a:hover {
         text-decoration: underline;
       }
+
+      footer {
+        text-align: center;
+        padding: 1.5rem;
+        background: #1a1a1a;
+        color: #bbb;
+      }
     </style>
   </head>
   <body>
@@ -100,7 +107,7 @@
         <a href="{{url_for('home')}}">Home</a>
         <a href="{{url_for('articles')}}">Articles</a>
         <a href="{{url_for('about')}}">About</a>
-        <a href="#">Contact</a>
+        <a href="{{url_for('contact')}}">Contact</a>
       </nav>
     </header>
     <div>
@@ -146,5 +153,8 @@
         </div>
       </section>
     </div>
+    <footer>
+      <p>&copy; 2025 Snippets on the Fly. All rights reserved.</p>
+    </footer>
   </body>
 </html>
